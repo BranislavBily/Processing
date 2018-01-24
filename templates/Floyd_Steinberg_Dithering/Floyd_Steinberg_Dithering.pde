@@ -1,8 +1,8 @@
 PImage kitten;
 
 void setup() {
+  kitten = loadImage("PabloSad.jpg");
   size(1024, 512);
-  kitten = loadImage("kitten.jpg");
   kitten.filter(GRAY);
   image(kitten, 0, 0);
 }
