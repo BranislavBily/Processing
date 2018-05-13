@@ -26,7 +26,7 @@ void setup() {
   cx = width / 2;
   cy = 50;
   
-  colorMode(HSB, width, width, width);
+  colorMode(HSB, 1.0);
   trails = createGraphics(width, height);
   trails.beginDraw();
   trails.background(0);
