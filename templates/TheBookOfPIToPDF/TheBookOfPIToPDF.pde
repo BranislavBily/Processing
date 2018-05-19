@@ -1,10 +1,14 @@
+/*
+Million digits of PI: https://www.piday.org/million/
+Take digits from there and change the directories
+*/
 import processing.pdf.*;
 
 String pi;
 
 void setup(){
-  size(700, 700, PDF, "bookOfPi.pdf");
-  pi = loadStrings("digitsOfPi.txt")[0];
+  size(700, 700, PDF, "C:/Users/Branislav/Documents/PI/hueOfPIToPDF/hueOfPiToPDFBook.pdf");
+  pi = loadStrings("C:/Users/Branislav/Documents/PI/digitsOfPI.txt")[0];
   PGraphicsPDF pdf = (PGraphicsPDF) g;
   
   int cols = 100;
@@ -25,9 +29,6 @@ void setup(){
         fill(hue, 1, 1);
         noStroke();
         rect(x, y, w, h);
-        //fill(255 - brightness);
-        //textAlign(CENTER);
-        //text(digit, x + w / 2, y + h);
         index++;
         if(index >= pi.length()) {
           index = pi.length() - 1;
